@@ -1,13 +1,17 @@
+/*-------------------- packages section --------------------*/
 package application;
 
+/*-------------------- importss section --------------------*/
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.LinkedHashSet;
 import java.util.Set;
 import java.util.TreeSet;
 
+/*-------------------- Class Program --------------------*/
 public class Program {
 
+	/*-------------------- functions section --------------------*/
 	private static Set<String> generateInstanceSetHashSet() {
 		return new HashSet<>();
 	}
@@ -54,10 +58,10 @@ public class Program {
 		String removed_item = generateInstanceString("Tablet");
 		
 		System.out.println();
-//		System.out.printf("Item existe no conjunto .......................................? [%s] %b%n", search_item, set.contains("Notebook"));
-//		System.out.printf("Item foi removido do conjunto .................................? [%s] %b%n", removed_item, set.remove(removed_item));
+		System.out.printf("Item existe no conjunto .......................................? [%s] %b%n", search_item, set.contains("Notebook"));
+		System.out.printf("Item foi removido do conjunto .................................? [%s] %b%n", removed_item, set.remove(removed_item));
 		System.out.printf("Item(s) que iniciam com 'T' foi removido do conjunto ..........? %b%n", set.removeIf(x -> x.charAt(0) == 'T'));
-//		System.out.printf("Item(s) com pelo menos 3 caracteres foi removido do conjunto ..? %b%n", set.removeIf(x -> x.length() >= 3));
+		System.out.printf("Item(s) com pelo menos 3 caracteres foi removido do conjunto ..? %b%n", set.removeIf(x -> x.length() >= 3));
 		displaySetItems(set);		
 	}
 	
@@ -85,10 +89,11 @@ public class Program {
 	}
 
 	private static void runProgram() {
-//		example01();
+		example01();
 		example02();
 	}
 
+	/*-------------------- main method --------------------*/
 	public static void main(String[] args) {
 		runProgram();
 		displayMessageEndOfProgram();
